@@ -1,0 +1,126 @@
+.posterLight,.posterDark {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+
+    border-radius: 15px 15px 5px 5px;
+}
+
+.posterLightUpc,.posterDarkUpc {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+
+    border-radius: 20px;
+}
+
+
+.posterDark,.posterDarkUpc{
+    -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+}
+
+.posterLight,.posterLightUpc{
+    -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.6);
+}
+
+.posterWrapLight,.posterWrapDark {
+    margin-bottom: 10px ;
+
+    height: 505px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 100ms;
+
+    position: relative;
+}
+
+.posterWrapDarkUpc,.posterWrapLightUpc {
+    margin-bottom: 10px ;
+
+    height: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 100ms;
+
+    position: relative;
+}
+
+.badgeUpc{
+    position:absolute;
+    top:19px;
+    right:20px;
+    font-size: 28px;
+
+    color: black;
+
+}
+.badgeUpc{
+    box-sizing: border-box;
+}
+
+
+.stars{
+    position: relative;
+
+    background: #848a8d;
+    width: 60%;
+    height: 30px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posterWrapLight .stars{
+  background: #cccccc; ;
+}
+
+.posterWrapDark:hover{
+    background: #848a8d;
+    border-radius: 25px;
+}
+
+.posterWrapDarkUpc:hover{
+    background: #848a8d;
+    border-radius: 25px;
+}
+
+.posterWrapLight:hover{
+    background: #cccccc;
+    border-radius: 25px;
+}
+
+.posterWrapLightUpc:hover{
+    background: #cccccc;
+    border-radius: 25px;
+}
+
+.stars:hover{
+    background: orange;
+}
+
+.badgeNew{
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:19px;
+    right:20px;
+    font-size: 28px;
+}
+
+.badgeNew svg{
+    width:50px;
+    height:50px;
+    color: #ffffff;
+}

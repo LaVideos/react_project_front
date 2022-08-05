@@ -1,0 +1,32 @@
+.main-container {
+    width: 1002px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.window {
+    height: 520px;
+    width: 100%;
+    overflow: scroll;
+    border-radius: 15px;
+}
+
+.all-pages-container {
+    height: 100%;
+    display: flex;
+    transition: translate;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+
+}
+
+.arrow{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin: 0;
+}

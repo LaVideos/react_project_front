@@ -1,0 +1,49 @@
+.img-wrap {
+    position: relative;
+}
+
+.movieData {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    font-size: 25px;
+    color: white;
+
+    background: #444242;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+
+
+}
+
+.movieData a{
+    text-decoration: none;
+    display: flex;
+
+    color: white;
+
+    font-weight: bold;
+
+    -webkit-transition: all 1s ease;
+    transition: 500ms;
+}
+
+.movieData>div{
+    -webkit-transition: all 1s ease;
+    transition: 500ms;
+}
+
+.movieData :hover{
+    color: #ffa000;
+    font-size: 26px;
+    transition: 500ms;
+}
+
+.movieData>div{
+    width: 270px;
+}
+
+

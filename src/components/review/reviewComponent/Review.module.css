@@ -1,0 +1,44 @@
+.reviewWrapLight{
+  color: black;
+    border-bottom: black;
+    background: #cccccc;
+}
+.reviewWrapDark{
+    color: #f5f5f5;
+    border-bottom: white;
+    background: #5d5d5d;
+}
+
+.reviewWrapLight,.reviewWrapDark{
+    margin: 30px 20px;
+
+    border-bottom: 2px solid;
+
+    padding: 10px;
+
+    border-radius: 20px;
+}
+
+.authorDetails{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.authorDetails img{
+    border-radius: 50%;
+}
+
+.authorDetails div {
+    margin-left: 20px;
+    font-size: 26px;
+}
+
+.time{
+    font-size: 10px;
+    margin: 10px;
+}
+
+.stars{
+    width: 160px;
+}

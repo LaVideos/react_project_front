@@ -4,16 +4,43 @@ import {movieDBService} from "../../services";
 const initialState = {
     movies:[],
     errors:null,
-    moviesWithGenre:[],
     topRatedFilm:[],
-    movie:null
+    movie:null,
+    moviesSearch:[],
+    pages:null,
+    upcoming:[]
 };
 
-const getSimilarMovies = createAsyncThunk(
-    'movieDBSlice/getSimilarMovies',
-    async ({id},{rejectWithValue})=>{
+const getUpcoming = createAsyncThunk(
+    'movieDBSlice/getUpcoming',
+    async ({page},{rejectWithValue})=>{
         try {
-            const {data} = await movieDBService.getSimilarMovies(id);
+            const {data} = await movieDBService.getUpcoming(page);
+            return data.results
+        }catch (e){
+            return rejectWithValue(e.response.data)
+        }
+    }
+);
+
+
+const getSearchMovie = createAsyncThunk(
+    'movieDBSlice/getSearchMovie',
+    async ({title},{rejectWithValue})=>{
+    try {
+        const {data} = await movieDBService.searchMovie(title);
+        return data.results
+    }catch (e){
+        return rejectWithValue(e.response.data)
+    }
+}
+);
+
+const getRecommendationMovies = createAsyncThunk(
+    'movieDBSlice/getSimilarMovies',
+    async ({id,page},{rejectWithValue})=>{
+        try {
+            const {data} = await movieDBService.getRecommendation(id,page);
             return data.results
         }catch (e){
             return rejectWithValue(e.response.data)
@@ -46,6 +73,7 @@ const getAllMovies = createAsyncThunk(
     }
 );
 
+
 const getMoviesById = createAsyncThunk(
     'movieDBSlice/getMoviesById',
     async ({id,page},{rejectWithValue})=>{
@@ -57,6 +85,7 @@ const getMoviesById = createAsyncThunk(
        }
     }
 )
+
 
 const movieDBSlice = createSlice({
     name:'movieDBSlice',
@@ -76,6 +105,15 @@ const movieDBSlice = createSlice({
             })
             .addCase(getTopRatedFilm.fulfilled,(state, action) => {
                 state.topRatedFilm = action.payload;
+            })
+            .addCase(getRecommendationMovies.fulfilled,(state, action) => {
+                state.movies = action.payload
+            })
+            .addCase(getSearchMovie.fulfilled,(state, action) => {
+                state.moviesSearch = action.payload
+            })
+            .addCase(getUpcoming.fulfilled,(state, action) => {
+                state.upcoming = action.payload
             })
             .addDefaultCase((state, action) => {
                 const [type] = action.type.split('/').splice(-1);
@@ -98,7 +136,9 @@ const movieActions = {
     getMoviesById,
     getTopRatedFilm,
     getMovieInfo,
-    getSimilarMovies
+    getRecommendationMovies,
+    getSearchMovie,
+    getUpcoming
 }
 
 export {

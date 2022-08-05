@@ -1,0 +1,10 @@
+.paginationWrap{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: white;
+    padding: 5px;
+
+    justify-items: center;
+    align-items: center;
+}

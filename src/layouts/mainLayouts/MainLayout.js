@@ -15,6 +15,7 @@ const MainLayout = () => {
         dispatch(movieActions.getMovieInfo(state));
     }, [state, dispatch])
 
+
     return (
         <div>
             <HeaderComponent/>

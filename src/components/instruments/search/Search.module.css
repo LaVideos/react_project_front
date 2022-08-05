@@ -1,0 +1,46 @@
+.searchPageDark,.searchPageLight{
+    padding-top: 200px;
+    height: 100%;
+}
+
+.searchPageDark{
+    background: linear-gradient(90deg, rgba(63,65,66,1) 0%, rgba(74,77,78,1) 50%, rgb(70, 73, 75) 100%);
+}
+
+
+.searchPageLight{
+    background: linear-gradient(90deg, rgb(246, 246, 246) 0%, rgb(246, 246, 246) 50%, rgb(238, 238, 238) 100%);
+}
+
+.formWrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.findMoviesWrap{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-top: 100px;
+}
+
+
+.badgeWrap{
+    display: flex;
+
+    margin: 50px;
+}
+
+.badgeResult{
+    font-size: 25px;
+    width: 250px;
+}
+
+.badgeResultData{
+    font-size: 25px;
+    width: 650px;
+
+}

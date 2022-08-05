@@ -1,6 +1,9 @@
 import React from 'react';
-import {MoviesListComponent} from "../../components";
+
+import {MoviesListComponent, TopRatedFilmsComponent} from "../../components";
 import {useParams} from "react-router-dom";
+
+import '../../components/movies/topRated/topRatedFilms/CarouselStyle.css';
 
 const MoviesListPage = () => {
 
@@ -8,6 +11,10 @@ const MoviesListPage = () => {
 
     return (
         <div>
+            { !id&& <div className="app__main-container">
+                <TopRatedFilmsComponent/>
+            </div>}
+
             <MoviesListComponent id={id} />
         </div>
     );

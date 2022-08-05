@@ -1,7 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+
 import {genresAction} from "../../../redux/slices";
 import {GenreComponent} from "../../index";
+
+import css from './Genres.module.css'
 
 const GenresComponent = () => {
 
@@ -14,7 +17,7 @@ const GenresComponent = () => {
     }, []);
 
     return (
-        <div>
+        <div className={css.genresWrap}>
             {
                 genres.map(genre=><GenreComponent genre={genre} key={genre.id}/>)
             }

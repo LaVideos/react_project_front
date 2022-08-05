@@ -1,11 +1,13 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+
+import css from './Genre.module.css';
+import {BadgeLinkComponent} from "../../index";
 
 const GenreComponent = ({genre}) => {
     const {id,name} = genre;
     return (
-        <div>
-           <NavLink to={id.toString()+'/moviesByGenre'}>{name}</NavLink>
+        <div className={css.genreWrap}>
+         <BadgeLinkComponent id={id} name={name}/>
         </div>
     );
 };

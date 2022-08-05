@@ -7,8 +7,12 @@ import css from './Pagination.module.css'
 const PaginationComponent = ({query,setQuery,count}) => {
 
     const nextTenPage = ()=>{
-        const next_ = +query.get('page')+10;
-        setQuery({page:`${next_}`});
+        if(+query.get('page') <count-10) {
+            const next_ = +query.get('page') + 10;
+            setQuery({page: `${next_}`});
+        } else {
+            setQuery({page:`${count}`});
+        }
     }
 
     const prevTenPage = () => {
